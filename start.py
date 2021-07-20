@@ -1,2 +1,1 @@
-  
-from go import app
+  from go import app
