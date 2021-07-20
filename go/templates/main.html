@@ -1,0 +1,35 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body  style="color:White; background-color:Black">
+ <div>
+            Project:
+            <a href="{{ url_for('hello') }}">Hello page</a>
+        </div>
+<h2>Chat</h2>
+<form method="post" action="/add_text">
+	<div>Username:</div>
+    <input type="text" name="text">
+    <div>Text:</div>
+    <input type="text" name="tag">
+    <button type="submit">Add status</button>
+</form>
+
+<h3>Statuses of people</h3>
+{% for message in messages %}
+<div>Username:
+{{ message.text}}&nbsp;
+    {% for tag in message.tags %}
+    Message:
+        <b>{{ tag.text }}</b>
+    {% endfor %}
+</div>
+{% endfor %}
+
+
+</body>
+</html>

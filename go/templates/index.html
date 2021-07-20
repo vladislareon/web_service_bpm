@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>Hello, everybody</h1>
+ <head>
+        {% if title %}
+        <title>{{ title }} - Project</title>
+        {% else %}
+        <title>Welcome to our site</title>
+        {% endif %}
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Greetings</title>
+</head>
+<body style="color:White; background-color:Black">
+	 <head>
+           <div>Here you can leave a review or write a message for other users:</div>
+            <a href="{{ url_for('chat') }}">Chat</a>
+            <div>Here you can get your data from GoogleFit:</div>
+            <a href="{{ url_for('test') }}">Fit</a>
+        </head>
+</body>
+</html>
